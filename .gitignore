@@ -12,7 +12,9 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+/db/seeds.rb
+/db/state_table.csv
+/db/zip_code_table.csv
 # Ignore Byebug command history file.
 .byebug_history
 

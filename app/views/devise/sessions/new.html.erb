@@ -25,3 +25,57 @@
       </div>
     <br />
   </div>
+  <div id="homeCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+      <!-- Carousel indicators -->
+      <ol class="carousel-indicators">
+          <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#homeCarousel" data-slide-to="1"></li>
+          <li data-target="#homeCarousel" data-slide-to="2"></li>
+      </ol>   
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="item active">
+              <div class="carousel-caption">
+                <h1>We are in offshore zones</h1>
+                <p><em>British Virgin Island</em></p>
+                <p><em>London</em></p>
+                <p><em>Madrid</em></p>
+                <p><em>HongKong</em></p>
+                <p><em>Kuala Lumpur</em></p>
+                <p><em><%= link_to "Open an account today!", home_about_path %></em></p>
+              </div>
+          </div>
+          <div class="item">
+              <div class="carousel-caption">
+                <h1>Savings is our middle name</h1>
+                <h3>Now offering 0.99&#37; APY!</h3>
+                <p><em><%= link_to "Open an account today!", home_about_path %></em></p>
+              </div>
+          </div>
+          <div class="item">
+              <div class="carousel-caption">
+                <h1>It's all for you!</h1>
+                <h3>See what we're about</h3>
+                <p><em><%= link_to "Learn more", home_about_path %></em></p>
+              </div>
+          </div>
+          <div class="item">
+              <div class="carousel-caption">
+                <h1>Questions?</h1>
+                <h3>Help is just a click away!</h3>
+                <p><em><%= link_to "Visit the help page", home_help_path %></em></p>
+              </div>
+          </div>
+      </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#homeCarousel" role="button" data-slide="prev">
+<!--         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span> -->
+        &lsaquo;
+      </a>
+      <a class="carousel-control right" href="#homeCarousel" role="button" data-slide="next">
+<!--         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span> -->
+        &rsaquo;
+      </a>
+  </div>

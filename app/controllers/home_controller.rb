@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
  require 'kitco'
+ before_action :authenticate_user!, except: [:help,:about]
 
   #rescue SocketError#, with: :getaddrinfo_tmp
 
@@ -13,7 +14,9 @@ class HomeController < ApplicationController
 
    def about
    end
-
+   def help
+   end
+   
    private
 
     def getaddrinfo_tmp
