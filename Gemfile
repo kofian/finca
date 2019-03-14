@@ -15,6 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'therubyracer', platforms: :ruby
 
+gem 'sprockets', '~>3.7.2'
+
 #gem 'compass', '~> 1.0.0'
 gem 'kaminari'
 gem 'figaro'
