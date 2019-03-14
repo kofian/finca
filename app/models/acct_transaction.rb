@@ -8,10 +8,10 @@ class AcctTransaction < ActiveRecord::Base
     has_many :wire_transfers
     belongs_to :payee
        
-       accepts_nested_attributes_for :wire_transfers, reject_if: lambda {|attributes| attributes['acct_transaction_id'].blank?}, :allow_destroy => true    
+  accepts_nested_attributes_for :wire_transfers, reject_if: lambda {|attributes| attributes['acct_transaction_id'].blank?}, :allow_destroy => true    
   accepts_nested_attributes_for :payee, :allow_destroy => true
 	accepts_nested_attributes_for :transaction_type, :allow_destroy => false
-        validates :amount,  presence: true
+  validates :amount,  presence: true
 	validates_numericality_of :amount
 	validate :funds_availability
 

@@ -38,7 +38,7 @@ AcctType.create(id: 2, name: 'checking', interest_rate: 0.000)
 
 # Generate 100 users (with "customer" role) (Admins created separately)
 users = [] # Empty array to store users
-99.times do
+20.times do
 	username = "#{FFaker::Vehicle.make}#{FFaker::BaconIpsum.word}-#{rand(999)}"
 	user_password = SecureRandom.base64(12)
 	u = User.new
@@ -66,7 +66,7 @@ Administrator.create(id: 1111111111, firstname: 'Peggy', lastname: 'Hill', user_
 
 # Generate 100 customers
 customers = [] # Empty array to store customers
-100.times do |i|
+20.times do |i|
 	c = Customer.new
 		user_id = User.select(:user_id).distinct
 
@@ -107,7 +107,7 @@ customers = [] # Empty array to store customers
 end
 
 # Generate 100 addresses for addresses table to be assigned to customers
-100.times do |i|
+20.times do |i|
 	a = Address.new
 		address1 = "#{FFaker::Address.street_address}"
 		city = "#{FFaker::Address.city}"
@@ -135,7 +135,7 @@ end
 
 # Generate the first 100 accounts
 accounts = []
-100.times do |i|
+20.times do |i|
     a = Account.new
     	a.customer_id = customers[i].id
     	a.acct_type_id = rand(1..2)
@@ -181,7 +181,7 @@ end
 end
 
 # Generate 50 more (secondary) accounts ("Some customers have more than 1 account")
-50.times do |i|
+10.times do |i|
     a = Account.new
     	a.customer_id = customers[i].id
     	a.acct_type_id = rand(1..2)
