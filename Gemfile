@@ -13,7 +13,8 @@ gem 'puma', '~> 3.0'
 #gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
-gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer', platforms: :ruby
+gem 'mini_racer', platforms: :ruby
 
 gem 'sprockets', '~>3.7.2'
 
@@ -40,7 +41,9 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem 'bootstrap-daterangepicker-rails'
 
 #gem 'passenger'
-
+group :production do
+  #gem 'mini_racer', platforms: :ruby
+end
 group :development do
   gem "capistrano-rails", require: false
   #gem "capistrano3-puma"
@@ -63,6 +66,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  #gem 'therubyracer', platforms: :ruby
   gem 'byebug', platform: :mri
   gem 'ffaker'
 end
