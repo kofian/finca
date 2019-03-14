@@ -25,7 +25,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
 gem 'bootstrap_form'
-gem 'kitco'
+#gem 'kitco'
 gem 'devise'
 gem 'foreigner'
 gem 'rufus-scheduler'
@@ -45,6 +45,7 @@ group :production do
   #gem 'mini_racer', platforms: :ruby
 end
 group :development do
+  gem 'derailed'
   gem "capistrano-rails", require: false
   #gem "capistrano3-puma"
   gem 'capistrano', '~> 3.1', require: false

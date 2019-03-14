@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  require 'kitco'
+  #require 'kitco'
 
   @account_active == true;
 
@@ -39,13 +39,13 @@ class ApplicationController < ActionController::Base
      Customer.find_by_user_id(current_user.id)
     end
 
-   def kitco
-    @gold = Kitco.gold
-    @silver = Kitco.silver
-    @platinum = Kitco.platinum
-    @palladium = Kitco.palladium
-    @rhodium = Kitco.rhodium
-   end
+   #def kitco
+   # @gold = Kitco.gold
+   # @silver = Kitco.silver
+   # @platinum = Kitco.platinum
+   # @palladium = Kitco.palladium
+   # @rhodium = Kitco.rhodium
+   #end
    def getaddrinfo_tmp
      logger.error "Failed to open TCP connection to charts.kitco.com:80"
      #notice: 'Failed to connect to charts.kitco.com'

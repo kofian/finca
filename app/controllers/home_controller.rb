@@ -1,16 +1,16 @@
 class HomeController < ApplicationController
- require 'kitco'
+ #require 'kitco'
  before_action :authenticate_user!, except: [:help,:about]
 
   #rescue SocketError#, with: :getaddrinfo_tmp
 
-   def index
-    @gold = Kitco.gold
-    @silver = Kitco.silver
-    @platinum = Kitco.platinum
-    @palladium = Kitco.palladium
-    @rhodium = Kitco.rhodium
-   end
+   #def index
+   # @gold = Kitco.gold
+   # @silver = Kitco.silver
+   # @platinum = Kitco.platinum
+   # @palladium = Kitco.palladium
+   # @rhodium = Kitco.rhodium
+   #end
 
    def about
    end
